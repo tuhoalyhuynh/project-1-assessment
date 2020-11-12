@@ -1,0 +1,54 @@
+
+.container {
+    width: 800px;
+    height: 500px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: .2fr .4fr .2fr;
+    grid-template-rows: .6fr .4fr;
+    grid-template-areas: "counter counter counter"
+                         "addition digit subtraction";
+    margin: 150px auto;
+}
+
+#counter {
+    grid-area: counter;
+    width: 700px;
+    height: 300px;
+    font-size: 200px;
+    text-align: center;
+}
+
+#addition, #subtraction {
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+    color: white;
+    font-size: 125px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#addition {
+    grid-area: addition;
+}
+
+#digit {
+    grid-area: digit;
+    text-align: center;
+    width: 300px;
+    font-size: 125px;
+    border-radius: 25px;
+    border: gray solid 5px;
+}
+
+#subtraction {
+    grid-area: subtraction;
+}
+
+#addition:hover, #subtraction:hover {
+    background-color: white;
+    color: gray;
+    border: gray solid 1px;
+    cursor: pointer
+}
